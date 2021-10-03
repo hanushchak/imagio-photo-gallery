@@ -1,0 +1,300 @@
+/*
+  * Author: Maksym Hanushchak, 000776919
+  *
+  * Date: December 2, 2019
+  *
+  * This material is original work of the authors stated above. 
+  * No other person's work has been used without due acknowledgement and we 
+  * (authors) have not made this work available to anyone else.
+  * 
+  * This stylesheet defines styling of Sign In, Sign Up, Upload and Comments forms and their input fields.
+*/
+
+/* Input fields style */
+input[type=text], input[type=password], input[type=email], input[type=file], textarea  {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #54AE79;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+/* When a button hovered */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancel_button {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.modal_header {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+/* Header of input form */
+.static_header {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+/* Container that contains input fields */
+.input_container {
+  padding: 16px;
+}
+
+/* Label of input container */
+.input_container label{
+    color:#54AE79;
+}
+
+/* Password label */
+span.user_password {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Modal container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Loading message (displayed on sign in, sing up or log out) */
+#modal_loading_message
+{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal_form {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 45rem; /* Could be more or less, depending on screen size */
+}
+/* Static Content/Box */
+.static_form {
+    background-color: #fefefe;
+    margin: auto;
+    width: 41rem; /* Could be more or less, depending on screen size */
+}
+
+/* Form with comment inputs */
+#comments_form
+{
+    width: 100%;
+    margin-top: 1vh;
+    border: 1px solid #54AE79;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* When Close button is hovered */
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Container with error labels for input fields */
+.unvalid_label
+{
+    color: #f44336;
+}
+
+/* Container with validation labels of input fields*/
+.validation_label_div
+{
+  text-align: center;
+  display: none;
+  
+}
+
+/* Error label above input fields */
+.label
+{
+  display:inline-block;
+}
+
+/* Incorrect credentials message */
+.incorrect_credentials
+{
+  text-align: center;
+  font-weight: bold;
+  color: #f44336;
+  display: none;
+}
+/* Signup error message */
+.signup_error
+{
+  text-align: center;
+  font-weight: bold;
+  color: #f44336;
+  display: none;
+}
+
+/* Upload image error message style */
+#upload_error
+{
+  text-align: center;
+  font-weight: bold;
+  color: #f44336;
+  display: none;
+}
+
+/* Error message during posting a comment */
+#comment_error
+{
+  text-align: center;
+  font-weight: bold;
+  color: #f44336;
+  display: none;
+}
+
+/* Post comment button style */
+#comment_submit
+{
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #54AE79;
+  border: 1px solid #54AE79;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Upload image success message style */
+#upload_success
+{
+  text-align: center;
+  font-weight: bold;
+  color: #54AE79;
+  display: none;
+}
+
+/* Comment posted successfully - message style */
+#comment_success
+{
+  text-align: center;
+  font-weight: bold;
+  color: #54AE79;
+  display: none;
+}
+
+/* Uploaded image preview syle */
+#upload_preview:hover
+{
+  cursor: pointer;
+}
+
+/* Add Zoom Animation when modal appears */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+/* FOR RESPONSIVE DESIGN */
+
+/* If screen is 800px or less */
+@media all and (max-width: 800px)
+{
+    .modal_form{
+        width: 90%;
+      }
+    .static_form{
+    width: 100%;
+    }
+   
+}
+
+/* If screen is 600px or less */
+@media all and (max-width: 600px)
+{
+    span.user_password {
+       display: block;
+       float: none;
+       text-align: center;
+    }
+    .cancel_button {
+       width: 100%;
+    }
+    .input_container label{
+        display: block;
+        text-align: center;
+    }
+    .input_container input{
+        text-align: center;
+    }
+}
+
+/* If screen is 500px or less */
+@media all and (max-width: 500px)
+{
+  .modal
+  {
+    padding-top: 0px;
+  }
+  #modal_loading_message
+  {
+    padding-top: 0px;
+  }
+  .modal_form
+  {
+    margin: 7% auto 10% auto; /* 5% from the top, 15% from the bottom and centered */
+  }
+}
